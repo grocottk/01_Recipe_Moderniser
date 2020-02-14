@@ -7,7 +7,7 @@
 def not_blank(question):
 
     valid = False
-    while not valid
+    while not valid:
         response = input(question)
 
         if response == "":
