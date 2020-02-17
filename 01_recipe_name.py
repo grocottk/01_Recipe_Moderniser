@@ -6,16 +6,36 @@
 
 def not_blank(question):
 
+    error = "Sorry, but you must enter a string as your recipe name. You cannot have numbers in your recipe name."
+
+    has_errors = ""
+
     valid = False
     while not valid:
         response = input(question)
 
+        # Look at each character in string, if any characters are numbers, give an error
+
+        for letter in response:
+            if __name__ == '__main__':
+                if letter.isdigit() == True:
+                    has_errors = "yes"
+                    break
+
         if response == "":
+            print()
             continue
+
+        elif has_errors != "":
+            print(error)
+            continue
+
         else:
             return response
 
         return response
+
+
 
 # Main Routine:
 
