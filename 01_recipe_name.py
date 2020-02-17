@@ -22,4 +22,3 @@ def not_blank(question):
 recipe_name = not_blank("What is the name of your recipe? ")
 
 print("You are making {}".format(recipe_name))
-
