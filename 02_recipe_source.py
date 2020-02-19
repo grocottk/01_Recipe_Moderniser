@@ -9,10 +9,14 @@ def not_blank(question, error_message, number_okay):
 
     error = error_message
 
+# Beginning of Loop:
+
     valid = False
     while not valid:
         response = input(question)
         has_errors = ""
+
+        # Checks if the user has allowed numbers in their source
 
         if number_okay != "yes":
 
@@ -24,11 +28,15 @@ def not_blank(question, error_message, number_okay):
                         has_errors = "yes"
                         break
 
+        # If the response is blank, give an error message
+
         if response == "":
             print()
-            print("Sorry, but you must enter something as your recipe name. You cannot leave this blank.")
+            print(error)
             print()
             continue
+
+        # If the response contains errors (numbers etc.) give error
 
         elif has_errors != "":
             print()
@@ -41,7 +49,13 @@ def not_blank(question, error_message, number_okay):
 
 # Main Routine:
 
-recipe_source = not_blank("Where us the recipe from? ", "The recipe source cannot be blank,", "Yes")
+# Defines the question, error message and whether numbers are allowed
+
+recipe_source = not_blank("Where is your recipe from? ",
+                          "The recipe source cannot be blank, but may have numbers.",
+                          "Yes")
+
+# Prints the source of the recipe
 
 print()
-print("You are making {}".format(recipe_source))
+print("The recipe is from {}".format(recipe_source))
