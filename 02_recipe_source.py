@@ -23,10 +23,9 @@ def not_blank(question, error_message, number_okay):
             # Look at each character in string, if any characters are numbers, give an error
 
             for letter in response:
-                if __name__ == '__main__':
-                    if letter.isdigit():
-                        has_errors = "yes"
-                        break
+                 if letter.isdigit():
+                    has_errors = "yes"
+                    break
 
         # If the response is blank, give an error message
 
@@ -53,7 +52,7 @@ def not_blank(question, error_message, number_okay):
 
 recipe_source = not_blank("Where is your recipe from? ",
                           "The recipe source cannot be blank, but may have numbers.",
-                          "Yes")
+                          "yes")
 
 # Prints the source of the recipe
 
