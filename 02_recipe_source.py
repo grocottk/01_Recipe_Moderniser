@@ -2,8 +2,10 @@
 # Recipe Moderniser Component 2
 # Asks user for the source of their recipe (in the form of a link), and checks that it is not blank
 
-# Blank Checking Function:
+# Functions:
 
+
+# Blank Checking Function:
 
 def not_blank(question, error_message, number_okay):
 
