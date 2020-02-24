@@ -29,11 +29,14 @@ def number_checker(question):
 
 # Main Routine:
 
-current_size = number_checker("How many servings does the recipe currently make? ")
-print()
-desired_size = number_checker("How many servings would you like to make? ")
-print()
+ideal_scale_factor = "no"
+while ideal_scale_factor == "no":
 
-scale_factor = desired_size / current_size
+    current_size = number_checker("How many servings does the recipe currently make? ")
+    print()
+    desired_size = number_checker("How many servings would you like to make? ")
+    print()
+
+    scale_factor = desired_size / current_size
 
 print("The scale factor of this recipe is {}".format(scale_factor))
