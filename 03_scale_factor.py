@@ -39,4 +39,19 @@ while ideal_scale_factor == "no":
 
     scale_factor = desired_size / current_size
 
+    if scale_factor < 0.25:
+        ideal_scale_factor = input("Warning: This scale factor is very small, "
+                                   "which might make it hard to measure accurately. \n"
+                                   "You might want to make the original recipe and keep leftovers. \n"
+                                   "Do you want to continue with this scale factor? Type no to change your "
+                                   "desired serving size. ")
+
+    elif scale_factor > 4:
+        ideal_scale_factor = input("Warning: This scale factor is very large, "
+                                   "which might not scale accurately to the average kitchen. \n"
+                                   "You might want to make the original recipe in multiple batches. \n"
+                                   "Do you want to continue with this scale factor? Type no to change your "
+                                   "desired serving size. ")
+
+print()
 print("The scale factor of this recipe is {}".format(scale_factor))
