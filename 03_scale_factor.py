@@ -58,4 +58,4 @@ while enter_scale_factor == "yes":
         enter_scale_factor = "no"
 
 print()
-print("The scale factor of this recipe is {}".format(scale_factor))
+print("The scale factor of this recipe is {:.2f}".format(scale_factor))
