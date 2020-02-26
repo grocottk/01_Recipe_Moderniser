@@ -97,29 +97,28 @@ while stop != "xxx":
     amount = number_checker("What is the amount for the ingredient? ")
     scaled = amount * scale_factor
 
-    # Ask user for ingredients (via blank checker)
-
-    get_ingredient = not_blank("Please enter your ingredients, and type the code 'xxx' when finished: ",
-                               "Please enter an ingredient name (this cannot be blank)",
-                               "yes")
-
-
-
     # Check to see if exit code is typed...
     # ...and check that the list contains at lest two valid items.
 
-    if get_ingredient.lower() == "xxx" and len(ingredients) > 1:
+    if amount.lower() == "xxx" and len(ingredients) > 1:
         break
 
     # If less than two ingredients are inserted into th list, show an error message
 
-    elif get_ingredient.lower() == "xxx" and len(ingredients) < 2:
+    elif amount.lower() == "xxx" and len(ingredients) < 2:
         print("You need at least two ingredients in the list. "
               "Please enter more ingredients. ")
 
     # If exit code is not entered, add ingredient to list
 
     else:
+
+        # Ask user for ingredients (via blank checker)
+
+        get_ingredient = not_blank("Please enter your ingredients, and type the code 'xxx' when finished: ",
+                                   "Please enter an ingredient name (this cannot be blank)",
+                                   "yes")
+
         ingredients.append(get_ingredient)
 
 # Print List
