@@ -67,8 +67,8 @@ while stop != "xxx":
 
     # Ask user for ingredients (via blank checker)
 
-    get_ingredient = not_blank("Please enter your ingredients: ",
-                               "The name can not be blank",
+    get_ingredient = not_blank("Please enter your ingredients, and type the code 'xxx' when finished: ",
+                               "Please enter an ingredient name (this cannot be blank)",
                                "yes")
 
     # Check to see if exit code is typed...
@@ -77,8 +77,10 @@ while stop != "xxx":
     if get_ingredient.lower() == "xxx" and len(ingredients) > 1:
         break
 
+    # If less than two ingredients are inserted into th list, show an error message
+
     elif get_ingredient.lower() == "xxx" and len(ingredients) < 2:
-        print("You need at least two ingredinets in teh list. "
+        print("You need at least two ingredients in the list. "
               "Please enter more ingredients. ")
 
     # If exit code is not entered, add ingredient to list
@@ -88,4 +90,4 @@ while stop != "xxx":
 
 # Print List
 
-print(ingredients)
+print("Your ingredients are {}".format(ingredients))
