@@ -11,22 +11,29 @@
 def number_checker(question):
 
     error = "Please enter a number that is more than zero."
+
     valid = False
     while not valid:
 
         response = input(question)
 
         # Check to see if exit code has been entered
+
         if response.lower() == "xxx":
-            return response
+            return "xxx"
+
         # if exit code not entered, check that input is a number
+
         else:
+
             try:
 
                 response = float(response)
                 if response <= 0:
                     print(error)
+
                 else:
+
                     return response
 
             except ValueError:
@@ -80,7 +87,7 @@ ingredients = []
 stop = ""
 while stop != "xxx":
 
-    amount = number_checker("What is the amount for the ingredient? Press 'xxx' to exit: ")
+    amount = number_checker("What is the amount of your ingredient? Press 'xxx' to exit: ")
 
     # Check to see if exit code is typed...
     # ...and check that the list contains at lest two valid items.
@@ -104,7 +111,9 @@ while stop != "xxx":
                                    "Please enter an ingredient name (this cannot be blank)",
                                    "yes")
 
-        ingredients.append(get_ingredient)
+        amount = float(amount) * scale_factor
+
+        ingredients.append("{} units {}".format(amount, get_ingredient))
 
 # Print Lists
 
