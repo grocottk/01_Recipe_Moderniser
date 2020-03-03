@@ -18,18 +18,24 @@ def number_checker(question):
     valid = False
     while not valid:
 
-        try:
-            response = float(input(question))
+        response = input(question)
 
-            if response <= 0:
+        if response.lower() == "xxx":
+            return "xxx"
+
+        else:
+
+            try:
+
+
+                if response <= 0:
+                    print(error)
+
+                else:
+                    return response
+
+            except ValueError:
                 print(error)
-
-            else:
-
-                return response
-
-        except ValueError:
-            print(error)
 
 # Blank Checking Function:
 
@@ -83,7 +89,6 @@ def not_blank(question, error_message, number_okay):
 scale_factor = float(input("What is your scale factor? "))
 
 
-
 # Set up empty ingredient list
 
 
@@ -95,7 +100,6 @@ stop = ""
 while stop != "xxx":
 
     amount = number_checker("What is the amount for the ingredient? ")
-    scaled = amount * scale_factor
 
     # Check to see if exit code is typed...
     # ...and check that the list contains at lest two valid items.
