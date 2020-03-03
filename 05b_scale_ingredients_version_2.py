@@ -77,7 +77,7 @@ def not_blank(question, error_message, number_okay):
 # Main Routine:
 
 # Replace line below with Component 3 eventually
-scale_factor = float(input("What is your scale factor? "))
+scale_factor = eval(input("What is your scale factor? "))
 
 # Set up empty ingredient list
 ingredients = []
@@ -113,8 +113,28 @@ while stop != "xxx":
 
         amount = float(amount) * scale_factor
 
+        # The following removes the decimal point for whole numbers:
+
+        if amount % 1 == 0:
+            amount = int(amount)
+
+        # This code keeps decimal numbers to as few places as possible
+
+        # This restricts the number tp 1 decimal place
+
+        elif amount * 10 % 1 == 0:
+            amount = "{:.1f}".format(amount)
+
+        # This restricts the number to 2 decimal places
+
+        else:
+
+            amount = "{:.2f}".format(amount)
+
+
         ingredients.append("{} units {}".format(amount, get_ingredient))
 
 # Print Lists
 
-print("Your ingredients are {}".format(ingredients))
+for item in ingredients:
+    print(item)
