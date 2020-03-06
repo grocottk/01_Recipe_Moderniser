@@ -4,8 +4,6 @@
 
 # To Do List on ePUB
 
-# If no unit is given / unit is unknown, leave as is.
-
 # Building list of milliliter unit conversions
 
 unit_dictionary = {
@@ -44,5 +42,7 @@ while keep_going == "":
     else:
 
         print("{} is unchanged".format(amount))
+
+# Loop Ends
 
 keep_going = input("Press enter to continue, or 'x' to quit")
