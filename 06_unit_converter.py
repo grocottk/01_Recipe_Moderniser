@@ -6,12 +6,12 @@
 
 # If no unit is given / unit is unknown, leave as is.
 
-# Buioling list of milliliter unit conversions
+# Building list of milliliter unit conversions
 
 unit_dictionary = {
     "tsp": 5,
     "tbs": 15,
-    "cup": 240,
+    "cup": 237,
     "ounce": 28.35,
     "pint": 473,
     "quart": 946,
@@ -19,24 +19,30 @@ unit_dictionary = {
     "stick": 113,
 }
 
-# Evaluates how much/unit of ingredient
+# Loop Begins
 
-amount = eval(input("How much? "))
-amount = float(amount)
+keep_going = ""
+while keep_going == "":
 
-unit = input("Unit? ")
+    # Evaluates how much/unit of ingredient
 
-# Checks if the unit is in the unit dictionary
+    amount = eval(input("How much? "))
+    amount = float(amount)
 
-if unit in unit_dictionary:
+    unit = input("Unit? ")
 
-    multiply_by = unit_dictionary.get(unit)
-    amount = amount * multiply_by
-    print("Amount in milliliters: {}".format(amount))
+    # Checks if the unit is in the unit dictionary
 
-# If the unit is not in the unit dictionary, the unit is unchanged
+    if unit in unit_dictionary:
 
-else:
+        multiply_by = unit_dictionary.get(unit)
+        amount = amount * multiply_by
+        print("Amount in milliliters: {}".format(amount))
 
-    print("{} is unchanged".format(amount))
+    # If the unit is not in the unit dictionary, the unit is unchanged
 
+    else:
+
+        print("{} is unchanged".format(amount))
+
+keep_going = input("Press enter to continue, or 'x' to quit")
