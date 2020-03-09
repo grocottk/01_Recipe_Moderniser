@@ -1,6 +1,6 @@
 
 # Recipe Moderniser Component 6
-# Asks the user to enter their units, and then converts to millileters or grams if applicable.
+# Asks the user to enter their units, and then converts to milliliters or grams if applicable.
 
 # To Do List on ePUB
 
@@ -98,7 +98,8 @@ unit_dictionary = {
 keep_going = ""
 while keep_going == "":
 
-    # Evaluates how much/unit of ingredient
+    # Evaluates how much/unit of ingredient (allows for equations to be done in converter,
+    # however does not allow fractions)
 
     amount = eval(input("How much? "))
     amount = float(amount)
