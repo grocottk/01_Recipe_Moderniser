@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="598affb6-5d49-4de0-886e-89544ce994db" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/01_Recipes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/01_Recipes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_general_converter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_recipe_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/01_recipe_name.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01b_no_numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/01b_no_numbers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07_gram_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/07_gram_converter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +38,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="H:\Documents\COM201\91896_&amp;_91897_Programming\01_Recipe_Modnerniser" />
     </key>
   </component>
@@ -191,22 +187,22 @@
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="100" y="123" width="1240" height="613" key="DiffContextDialog/0.23.1440.813@0.23.1440.813" timestamp="1583821411620" />
-    <state width="1440" height="167" key="GridCell.Tab.0.bottom" timestamp="1583822829915">
+    <state width="875" height="167" key="GridCell.Tab.0.bottom" timestamp="1583823401617">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="1440" height="167" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1583822829915" />
-    <state width="1440" height="167" key="GridCell.Tab.0.center" timestamp="1583822829913">
+    <state width="875" height="167" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1583823401617" />
+    <state width="875" height="167" key="GridCell.Tab.0.center" timestamp="1583823401616">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="1440" height="167" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1583822829913" />
-    <state width="1440" height="167" key="GridCell.Tab.0.left" timestamp="1583822829912">
+    <state width="875" height="167" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1583823401616" />
+    <state width="875" height="167" key="GridCell.Tab.0.left" timestamp="1583823401615">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="1440" height="167" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1583822829912" />
-    <state width="1440" height="167" key="GridCell.Tab.0.right" timestamp="1583822829914">
+    <state width="875" height="167" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1583823401615" />
+    <state width="875" height="167" key="GridCell.Tab.0.right" timestamp="1583823401616">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="1440" height="167" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1583822829914" />
+    <state width="875" height="167" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1583823401616" />
     <state x="229" y="68" key="SettingsEditor" timestamp="1583821907681">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
