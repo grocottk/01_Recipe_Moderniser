@@ -7,6 +7,23 @@
 # Functions:
 
 
+# General Dictionary Checking Function
+
+# Checks if the unit is in the dictionary
+
+def general_converter(how_much, lookup, dictionary, conversion_factor):
+
+    if lookup in dictionary:
+
+        multiply_by = dictionary.get(unit)
+        how_much = how_much * multiply_by * conversion_factor
+        print("Amount in milliliters: {}".format(how_much))
+
+    return how_much
+
+# Unit Checking Function
+
+
 def unit_checker():
 
     unit_to_check = input("What is your unit? ")
@@ -108,19 +125,9 @@ while keep_going == "":
 
     unit = unit_checker()
 
-    # Checks if the unit is in the unit dictionary
+    # Calls General Converter Function
 
-    if unit in unit_dictionary:
-
-        multiply_by = unit_dictionary.get(unit)
-        amount = amount * multiply_by
-        print("Amount in milliliters: {}".format(amount))
-
-    # If the unit is not in the unit dictionary, the unit is unchanged
-
-    else:
-
-        print("{} is unchanged".format(amount))
+    amount = general_converter(amount, unit, unit_dictionary, 1)
 
 # Loop Ends
 
