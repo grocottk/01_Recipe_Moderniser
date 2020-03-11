@@ -9,66 +9,57 @@ import re
 
 recipe_line = "1 1/2 ml flour"
 
+full_recipe = [
+    "1 1/2 ml flour",
+    "3/4 cup milk",
+    "1 cup flour",
+    "2 tablespoons white sugar",
+    "1.5 tsp baking powder",
+    "pinch of cinnamon"
+]
+
+# The regular expression that is used in splitting
+
 mixed_regex = "\d{1,3}\s\d{1,3}\/\d{1,3}"
 
-# If the regular expression is functional, then print "Functional", if not, print "Not Functional"
+# The 'for' loop that allows for constant input
 
-if re.match(mixed_regex, recipe_line):
+for recipe_line in full_recipe:
 
-    print("Functional")
+    # Checks to see ff the regular expression is functional
 
-    # Get mixed number by matching the regular expression
+    if re.match(mixed_regex, recipe_line):
 
-    pre_mixed_number = re.match(mixed_regex, recipe_line)
+        # Get mixed number by matching the regular expression
+        pre_mixed_number = re.match(mixed_regex, recipe_line)
 
-    # Using the group method to isolare the number
+        # Using the group method to isolate the number
+        mixed_number = pre_mixed_number.group()
 
-    mixed_number = pre_mixed_number.group()
+        # Replace the space with a 'plus' sign:
+        amount = mixed_number.replace(" ", "+")
 
-    # Replace the space with a 'plus' sign:
+        # Change the above string into a decimal:
+        amount = eval(amount)
 
-    amount = mixed_number.replace(" ", "+")
+        # Get Unit and ingredient:
+        compile_regex = re.compile(mixed_regex)
 
-    # Change the above string into a decimal:
+        # Inserts data gained so far into a list
+        unit_ingredient = re.split(compile_regex, recipe_line)
 
-    amount = eval(amount)
+        # Removes the extra whitespace (spaces) from a unit
+        unit_ingredient = (unit_ingredient[1]).strip()
 
-    print(amount)
-
-    # Get Unit and ingredient:
-
-    compile_regex = re.compile(mixed_regex)
-
-    # Prints the compiled Regular Expression
-
-    print(compile_regex)
-
-    # Inserts data gained so far into a list
-
-    unit_ingredient = re.split(compile_regex, recipe_line)
-
-    # Removes the extra whitespace (spaces) from a unit
-
-    unit_ingredient = (unit_ingredient[1]).strip()
-
-    # Prints the list
-
-    print(unit_ingredient)
+# Getting the unit and ingredient:
 
 # Splits the text at the first space
-
 get_unit = unit_ingredient.split(" ", 1)
 
-# Prints the list, with no whitespace
-
-print(get_unit)
-
 # Sets the Unit to the first item in the list
-
 unit = get_unit[0]
 
 # Sets the Ingredient to the second item in the list
-
 ingredient = get_unit[1]
 
 # Prints the Unit
