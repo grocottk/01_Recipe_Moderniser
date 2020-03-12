@@ -7,8 +7,6 @@ import re
 # Ingredient has a mixed fraction followed by a unit and ingredient
 # (Change below into input statement at a later date)
 
-recipe_line = "1 1/2 ml flour"
-
 full_recipe = [
     "1 1/2 ml flour",
     "3/4 cup milk",
@@ -26,7 +24,11 @@ mixed_regex = "\d{1,3}\s\d{1,3}\/\d{1,3}"
 
 for recipe_line in full_recipe:
 
-    # Checks to see ff the regular expression is functional
+    # Strips whitespace from the inputted recipe
+
+    recipe_line = recipe_line.strip()
+
+    # Checks to see if the regular expression is functional
 
     if re.match(mixed_regex, recipe_line):
 
@@ -51,21 +53,40 @@ for recipe_line in full_recipe:
         # Removes the extra whitespace (spaces) from a unit
         unit_ingredient = (unit_ingredient[1]).strip()
 
-# Getting the unit and ingredient:
+    else:
 
-# Splits the text at the first space
-get_unit = unit_ingredient.split(" ", 1)
+        # Splits the code at the first 'space'
 
-# Sets the Unit to the first item in the list
-unit = get_unit[0]
+        get_amount = recipe_line.split(" ", 1)
 
-# Sets the Ingredient to the second item in the list
-ingredient = get_unit[1]
+        try:
 
-# Prints the Unit
+            # Converts the amount to a 'float' if possible
 
-print(unit)
+            amount = eval(get_amount[0])
 
-# Prints the Ingredient
+        except NameError:
 
-print(ingredient)
+            # When no number is present:
+
+            amount = get_amount[0]
+            convert = "no"
+
+        # Combines Unit and ingredient together
+
+        unit_ingredient = get_amount[1]
+
+    # Getting the unit and ingredient:
+
+    # Splits the text at the first space
+    get_unit = unit_ingredient.split(" ", 1)
+
+    # Sets the Unit to the first item in the list
+    unit = get_unit[0]
+
+    # Sets the Ingredient to the second item in the list
+    ingredient = get_unit[1]
+
+    # Prints the Amount, Unit and Ingredient of the line
+
+    print("{} {} {}".format(amount, unit, ingredient))

@@ -210,29 +210,49 @@
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="100" y="123" width="1240" height="613" key="DiffContextDialog/0.23.1440.813@0.23.1440.813" timestamp="1583821411620" />
-    <state width="875" height="167" key="GridCell.Tab.0.bottom" timestamp="1583913971811">
+    <state width="875" height="268" key="GridCell.Tab.0.bottom" timestamp="1583999262453">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="875" height="167" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1583913971811" />
-    <state width="875" height="167" key="GridCell.Tab.0.center" timestamp="1583913971810">
+    <state width="875" height="268" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1583999262453" />
+    <state width="875" height="268" key="GridCell.Tab.0.center" timestamp="1583999262452">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="875" height="167" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1583913971810" />
-    <state width="875" height="167" key="GridCell.Tab.0.left" timestamp="1583913971809">
+    <state width="875" height="268" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1583999262452" />
+    <state width="875" height="268" key="GridCell.Tab.0.left" timestamp="1583999262451">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="875" height="167" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1583913971809" />
-    <state width="875" height="167" key="GridCell.Tab.0.right" timestamp="1583913971810">
+    <state width="875" height="268" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1583999262451" />
+    <state width="875" height="268" key="GridCell.Tab.0.right" timestamp="1583999262452">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="875" height="167" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1583913971810" />
+    <state width="875" height="268" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1583999262452" />
+    <state width="875" height="268" key="GridCell.Tab.1.bottom" timestamp="1583999262455">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state width="875" height="268" key="GridCell.Tab.1.bottom/0.23.1440.813@0.23.1440.813" timestamp="1583999262455" />
+    <state width="875" height="268" key="GridCell.Tab.1.center" timestamp="1583999262454">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state width="875" height="268" key="GridCell.Tab.1.center/0.23.1440.813@0.23.1440.813" timestamp="1583999262454" />
+    <state width="875" height="268" key="GridCell.Tab.1.left" timestamp="1583999262453">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state width="875" height="268" key="GridCell.Tab.1.left/0.23.1440.813@0.23.1440.813" timestamp="1583999262453" />
+    <state width="875" height="268" key="GridCell.Tab.1.right" timestamp="1583999262454">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state width="875" height="268" key="GridCell.Tab.1.right/0.23.1440.813@0.23.1440.813" timestamp="1583999262454" />
     <state x="229" y="68" key="SettingsEditor" timestamp="1583821907681">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="229" y="68" key="SettingsEditor/0.23.1440.813@0.23.1440.813" timestamp="1583821907681" />
-    <state x="36" y="160" width="670" height="676" key="search.everywhere.popup" timestamp="1583913625834">
+    <state x="283" y="174" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583998294541">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state x="36" y="160" width="670" height="676" key="search.everywhere.popup/0.23.1440.813@0.23.1440.813" timestamp="1583913625834" />
+    <state x="283" y="174" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.813@0.23.1440.813" timestamp="1583998294541" />
+    <state x="36" y="160" width="670" height="676" key="search.everywhere.popup" timestamp="1583997200666">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state x="36" y="160" width="670" height="676" key="search.everywhere.popup/0.23.1440.813@0.23.1440.813" timestamp="1583997200666" />
   </component>
 </project>
