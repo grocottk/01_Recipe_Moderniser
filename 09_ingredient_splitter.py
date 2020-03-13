@@ -8,7 +8,7 @@ import re
 # (Change below into input statement at a later date)
 
 full_recipe = [
-    "1 1/2 ml flour",
+    "1 3/4 cups flour",
     "3/4 cup milk",
     "1 cup flour",
     "2 tablespoons white sugar",
