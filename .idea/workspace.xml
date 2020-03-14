@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="598affb6-5d49-4de0-886e-89544ce994db" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/09_ingredient_splitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/09_ingredient_splitter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10_assembled_outcome.py" beforeDir="false" afterPath="$PROJECT_DIR$/10_assembled_outcome.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
       <recent name="H:\Documents\COM201\91896_&amp;_91897_Programming\01_Recipe_Modnerniser" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.09_ingredient_splitter">
+  <component name="RunManager" selected="Python.10_assembled_outcome">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,27 +61,6 @@
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <method />
-    </configuration>
-    <configuration name="06_unit_converter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="01_Recipes" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/06_unit_converter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="07_gram_converter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="01_Recipes" />
@@ -167,20 +146,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="10_assembled_outcome" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01_Recipes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10_assembled_outcome.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.06_unit_converter" />
       <item itemvalue="Python.07_gram_converter" />
       <item itemvalue="Python.08_general_converter" />
       <item itemvalue="Python.09_assembled_outcome" />
       <item itemvalue="Python.09_ingredient_splitter" />
+      <item itemvalue="Python.10_assembled_outcome" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.10_assembled_outcome" />
         <item itemvalue="Python.09_ingredient_splitter" />
         <item itemvalue="Python.09_assembled_outcome" />
         <item itemvalue="Python.08_general_converter" />
         <item itemvalue="Python.07_gram_converter" />
-        <item itemvalue="Python.06_unit_converter" />
       </list>
     </recent_temporary>
   </component>
@@ -210,22 +210,22 @@
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="100" y="123" width="1240" height="613" key="DiffContextDialog/0.23.1440.813@0.23.1440.813" timestamp="1583821411620" />
-    <state width="875" height="268" key="GridCell.Tab.0.bottom" timestamp="1583999262453">
+    <state width="875" height="155" key="GridCell.Tab.0.bottom" timestamp="1584226425620">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="875" height="268" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1583999262453" />
-    <state width="875" height="268" key="GridCell.Tab.0.center" timestamp="1583999262452">
+    <state width="875" height="155" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1584226425620" />
+    <state width="875" height="155" key="GridCell.Tab.0.center" timestamp="1584226425619">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="875" height="268" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1583999262452" />
-    <state width="875" height="268" key="GridCell.Tab.0.left" timestamp="1583999262451">
+    <state width="875" height="155" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1584226425619" />
+    <state width="875" height="155" key="GridCell.Tab.0.left" timestamp="1584226425618">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="875" height="268" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1583999262451" />
-    <state width="875" height="268" key="GridCell.Tab.0.right" timestamp="1583999262452">
+    <state width="875" height="155" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1584226425618" />
+    <state width="875" height="155" key="GridCell.Tab.0.right" timestamp="1584226425619">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state width="875" height="268" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1583999262452" />
+    <state width="875" height="155" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1584226425619" />
     <state width="875" height="268" key="GridCell.Tab.1.bottom" timestamp="1583999262455">
       <screen x="0" y="23" width="1440" height="813" />
     </state>

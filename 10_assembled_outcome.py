@@ -35,7 +35,8 @@ def not_blank(question, error_message, number_okay):
             # Look at each character in string, if any characters are numbers, give an error
 
             for letter in response:
-                 if letter.isdigit():
+
+                if letter.isdigit():
                     has_errors = "yes"
                     break
 
@@ -59,6 +60,7 @@ def not_blank(question, error_message, number_okay):
             return response
 
 # Number Checking Function:
+# (Makes sure that the number is a 'float' that is more than zero (0))
 
 
 def number_checker(question):
@@ -99,11 +101,15 @@ def get_scale_factor():
 
         scale_factor = desired_size / current_size
 
+        # If the scale factor is less than 0.25, warn the user
+
         if scale_factor < 0.25:
             enter_scale_factor = input("Warning: This scale factor is very small, "
                                        "which might make it hard to measure accurately. \n"
                                        "You might want to make the original recipe and keep leftovers. \n"
                                        "Do you want to fix this and make more servings? ").lower()
+
+        # If the scale factor is more than 4, warn the user
 
         elif scale_factor > 4:
             enter_scale_factor = input("Warning: This scale factor is very large, "
@@ -111,18 +117,66 @@ def get_scale_factor():
                                        "You might want to make the original recipe in multiple batches. \n"
                                        "Do you want to fix this and make less servings? ").lower()
 
+        # If none of these are the case, return the scale factor
+
         else:
             enter_scale_factor = "no"
 
     return scale_factor
 
+# Ingredient Getting Function:
+# (Function also checks the amount, units and ingredients to see if they are valid)
+
+
+def get_all_ingredients():
+
+    # Creates an empty list to eventually contain ingredients
+
+    all_ingredients = []
+
+    stop = ""
+
+    # Tells users information at the beginning of the loop
+
+    print("Please enter ingredients one at a time, and enter 'xxx' when you have finished entering ingredients ")
+
+    # Loop asking users to enter an ingredient
+
+    while stop != "xxx":
+
+        # Ask user for ingredients (via blank checker)
+
+        get_ingredient = not_blank("Recipe Line: ",
+                                   "This can't be blank",
+                                   "yes")
+
+        # Check to see if exit code is typed...
+        # ...and check that the list contains at lest two valid items.
+
+        if get_ingredient.lower() == "xxx" and len(all_ingredients) > 1:
+            break
+
+        # If less than two ingredients are inserted into th list, show an error message
+
+        elif get_ingredient.lower() == "xxx" and len(all_ingredients) < 2:
+            print("You need at least two ingredients in the list. "
+                  "Please enter more ingredients. ")
+
+        # If exit code is not entered, add ingredient to list
+
+        else:
+            all_ingredients.append(get_ingredient)
+
+    return all_ingredients
+
 # Main Routine:
+
 
 # Asks the user for the name of the recipe, and checks to see if the recipe has numbers or is blank.
 
 recipe_name = not_blank("Where is the name of your recipe? ",
-                          "The recipe name cannot be blank, and cannot contain numbers.",
-                          "no")
+                        "The recipe name cannot be blank, and cannot contain numbers.",
+                        "no")
 
 # Asks the user where the recipe is originally from
 # (Defines the question, error message and whether numbers are allowed)
@@ -135,6 +189,89 @@ recipe_source = not_blank("Where is your recipe from? ",
 
 scale_factor = get_scale_factor()
 
-# Prints Scale Factor
+# Get amounts, units and ingredients from the user:
 
-print(scale_factor)
+full_recipe = get_all_ingredients()
+
+# Split each line of the recipe into amount, unit and ingredient...
+
+# The regular expression that is used in splitting
+
+mixed_regex = "\d{1,3}\s\d{1,3}\/\d{1,3}"
+
+convert = "yes"
+
+# The 'for' loop that allows for constant input
+
+for recipe_line in full_recipe:
+
+    # Strips whitespace from the inputted recipe
+
+    recipe_line = recipe_line.strip()
+
+    # Checks to see if the regular expression is functional
+
+    if re.match(mixed_regex, recipe_line):
+
+        # Get mixed number by matching the regular expression
+        pre_mixed_number = re.match(mixed_regex, recipe_line)
+
+        # Using the group method to isolate the number
+        mixed_number = pre_mixed_number.group()
+
+        # Replace the space with a 'plus' sign:
+        amount = mixed_number.replace(" ", "+")
+
+        # Change the above string into a decimal:
+        amount = eval(amount)
+
+        # Get Unit and ingredient:
+        compile_regex = re.compile(mixed_regex)
+
+        # Inserts data gained so far into a list
+        unit_ingredient = re.split(compile_regex, recipe_line)
+
+        # Removes the extra whitespace (spaces) from a unit
+        unit_ingredient = (unit_ingredient[1]).strip()
+
+    else:
+
+        # Splits the code at the first 'space'
+
+        get_amount = recipe_line.split(" ", 1)
+
+        try:
+
+            # Converts the amount to a 'float' if possible
+
+            amount = eval(get_amount[0])
+
+        except NameError:
+
+            # When no number is present:
+
+            amount = get_amount[0]
+            convert = "no"
+
+        # Combines Unit and ingredient together
+
+        unit_ingredient = get_amount[1]
+
+    # Getting the unit and ingredient:
+
+    # Splits the text at the first space
+    get_unit = unit_ingredient.split(" ", 1)
+
+    # Sets the Unit to the first item in the list
+    # (Converts the unit into milliliters)
+
+    unit = get_unit[0]
+
+    # Sets the Ingredient to the second item in the list
+    # (Converts the ingredient into grams)
+
+    ingredient = get_unit[1]
+
+    # Prints the Amount, Unit and Ingredient of the line
+
+    print("{} {} {}".format(amount, unit, ingredient))
