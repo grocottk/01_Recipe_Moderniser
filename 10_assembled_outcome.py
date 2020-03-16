@@ -90,6 +90,7 @@ def get_scale_factor():
 
     current_size = number_checker("How many servings does the recipe currently make? ")
     print()
+    sf = ""
 
     # Main Routine Goes Here
 
@@ -99,11 +100,11 @@ def get_scale_factor():
         desired_size = number_checker("How many servings would you like to make? ")
         print()
 
-        scale_factor = desired_size / current_size
+        sf = desired_size / current_size
 
         # If the scale factor is less than 0.25, warn the user
 
-        if scale_factor < 0.25:
+        if sf < 0.25:
             enter_scale_factor = input("Warning: This scale factor is very small, "
                                        "which might make it hard to measure accurately. \n"
                                        "You might want to make the original recipe and keep leftovers. \n"
@@ -111,7 +112,7 @@ def get_scale_factor():
 
         # If the scale factor is more than 4, warn the user
 
-        elif scale_factor > 4:
+        elif sf > 4:
             enter_scale_factor = input("Warning: This scale factor is very large, "
                                        "which might not scale accurately to the average kitchen. \n"
                                        "You might want to make the original recipe in multiple batches. \n"
@@ -122,7 +123,7 @@ def get_scale_factor():
         else:
             enter_scale_factor = "no"
 
-    return scale_factor
+    return sf
 
 # Ingredient Getting Function:
 # (Function also checks the amount, units and ingredients to see if they are valid)
