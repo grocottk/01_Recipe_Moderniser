@@ -172,6 +172,8 @@ def get_all_ingredients():
 
 # Main Routine:
 
+# Set up a list to hold converted recipe
+modernised_recipe = []
 
 # Asks the user for the name of the recipe, and checks to see if the recipe has numbers or is blank.
 
@@ -199,8 +201,6 @@ full_recipe = get_all_ingredients()
 # The regular expression that is used in splitting
 
 mixed_regex = "\d{1,3}\s\d{1,3}\/\d{1,3}"
-
-convert = "yes"
 
 # The 'for' loop that allows for constant input
 
@@ -247,12 +247,18 @@ for recipe_line in full_recipe:
 
             amount = eval(get_amount[0])
 
+            amount = amount * scale_factor
+
         except NameError:
 
             # When no number is present:
 
             amount = get_amount[0]
-            convert = "no"
+
+            # Adds the recipe line into the modernised recipe
+
+            modernised_recipe.append(recipe_line)
+            continue
 
         # Combines Unit and ingredient together
 
@@ -273,6 +279,12 @@ for recipe_line in full_recipe:
 
     ingredient = get_unit[1]
 
-    # Prints the Amount, Unit and Ingredient of the line
+    # Formats the list in the amount, unit and ingredient format
 
-    print("{} {} {}".format(amount, unit, ingredient))
+    modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
+
+# For every item in the list, print the item
+
+for item in modernised_recipe():
+
+    print(item)
