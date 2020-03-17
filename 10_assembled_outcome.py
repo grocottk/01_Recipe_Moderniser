@@ -172,6 +172,7 @@ def get_all_ingredients():
 
 # Main Routine:
 
+
 # Set up a list to hold converted recipe
 modernised_recipe = []
 
@@ -226,6 +227,9 @@ for recipe_line in full_recipe:
         # Change the above string into a decimal:
         amount = eval(amount)
 
+        # Applies Scale Factor to Decimals
+        amount = amount * scale_factor
+
         # Get Unit and ingredient:
         compile_regex = re.compile(mixed_regex)
 
@@ -274,17 +278,32 @@ for recipe_line in full_recipe:
 
     unit = get_unit[0]
 
-    # Sets the Ingredient to the second item in the list
-    # (Converts the ingredient into grams)
+    # Adapts to number of spaces used in recipe line
 
-    ingredient = get_unit[1]
+    unit = get_unit[0]
 
-    # Formats the list in the amount, unit and ingredient format
+    num_spaces = recipe_line.count(" ")
 
-    modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
+    if num_spaces > 1:
+
+        # Sets the Ingredient to the second item in the list
+        # (Converts the ingredient into grams)
+
+        ingredient = get_unit[1]
+
+    else:
+
+        modernised_recipe.append("{} {} {}".format(amount, unit, unit_ingredient))
+        continue
+
+# Formats the list in the amount, unit and ingredient format
+
+modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
 
 # For every item in the list, print the item
 
-for item in modernised_recipe():
+# Code that was taken out: "for item in modernised_recipe:"
 
-    print(item)
+# Temporarily Prints list
+
+print(modernised_recipe)
