@@ -296,14 +296,12 @@ for recipe_line in full_recipe:
         modernised_recipe.append("{} {} {}".format(amount, unit, unit_ingredient))
         continue
 
-# Formats the list in the amount, unit and ingredient format
+    # Formats the list in the amount, unit and ingredient format
 
-modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
+    modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
 
 # For every item in the list, print the item
 
-# Code that was taken out: "for item in modernised_recipe:"
+for item in modernised_recipe:
 
-# Temporarily Prints list
-
-print(modernised_recipe)
+    print(item)
