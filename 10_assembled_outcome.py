@@ -262,8 +262,6 @@ for row in csv_groceries:
 
     food_dictionary[row[0]] = row[1]
 
-# print(food_dictionary)
-
 # Prints the dictionary as a whole (Useful for testing, but ultimately removed)
 
 # print(food_dictionary)
@@ -416,23 +414,32 @@ for recipe_line in full_recipe:
     # Splits the text at the first space
     get_unit = unit_ingredient.split(" ", 1)
 
-    # Sets the Unit to the first item in the list
-    # (Converts the unit into milliliters)
-
-    unit = get_unit[0]
-
     # Adapts to number of spaces used in recipe line
-
-    unit = get_unit[0]
 
     num_spaces = recipe_line.count(" ")
 
     if num_spaces > 1:
 
+        # Item has unit and ingredient
+
+        unit = get_unit[0]
+
         # Sets the Ingredient to the second item in the list
         # (Converts the ingredient into grams)
 
         ingredient = get_unit[1]
+
+        unit = unit_checker(unit)
+
+        # If unit is already in grams, add it to list
+
+        if unit = "g":
+
+            modernised_recipe.append("{:.0f} g {}".format(amount, ingredient))
+
+            continue
+
+        # if unit is already in grams
 
     else:
 
