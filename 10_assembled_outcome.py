@@ -149,9 +149,7 @@ def general_converter(how_much, lookup, dictionary, conversion_factor):
 # Unit Checking Function
 
 
-def unit_checker():
-
-    unit_to_check = input("What is your unit? ")
+def unit_checker(unit_to_check):
 
     # Abbreviation Lists for various measurements
 
@@ -463,14 +461,32 @@ for recipe_line in full_recipe:
 
                 continue
 
+        # If the unit is not milliliters, leave the line unchanged
+
+        else:
+
+            modernised_recipe.append("{:.2f} {} {}".format(amount[0], unit, ingredient))
+
     else:
 
         modernised_recipe.append("{} {} {}".format(amount, unit, unit_ingredient))
-        continue
 
     # Formats the list in the amount, unit and ingredient format
 
-    modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
+    # modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
+
+# Modernised Recipe Presented:
+
+# Print Recipe Name
+
+print()
+print(recipe_name)
+
+# Print Recipe Source
+
+print()
+print(recipe_source)
+print()
 
 # For every item in the list, print the item
 
