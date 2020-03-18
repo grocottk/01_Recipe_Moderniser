@@ -433,13 +433,35 @@ for recipe_line in full_recipe:
 
         # If unit is already in grams, add it to list
 
-        if unit = "g":
+        if unit == "g":
 
             modernised_recipe.append("{:.0f} g {}".format(amount, ingredient))
 
             continue
 
-        # if unit is already in grams
+        # Converts ingredient to milliliters if possible:
+
+        amount = general_converter(amount, unit, unit_dictionary, 1)
+
+        # If the ingredient has been converted to milliliters, try and convert the ingredient to grams
+
+        if amount[1] == "yes":
+
+            amount_2 = general_converter(amount[0], ingredient, food_dictionary, 250)
+
+            # If the ingredient is in the list, convert it
+
+            if amount_2[1] == "yes":
+
+                modernised_recipe.append("{:.0f} g {}".format(amount_2[0], ingredient))
+
+            # If the ingredient is not in the list, leave the unit as milliliters
+
+            else:
+
+                modernised_recipe.append("{:.0f} ml {}".format(amount[0], ingredient))
+
+                continue
 
     else:
 
