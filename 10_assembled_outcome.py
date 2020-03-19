@@ -89,7 +89,6 @@ def number_checker(question):
 def get_scale_factor():
 
     current_size = number_checker("How many servings does the recipe currently make? ")
-    print()
     sf = ""
 
     # Main Routine Goes Here
@@ -98,7 +97,6 @@ def get_scale_factor():
     while enter_scale_factor == "yes":
 
         desired_size = number_checker("How many servings would you like to make? ")
-        print()
 
         sf = desired_size / current_size
 
@@ -278,6 +276,7 @@ def get_all_ingredients():
 
     # Tells users information at the beginning of the loop
 
+    print()
     print("Please enter ingredients one at a time, and enter 'xxx' when you have finished entering ingredients ")
 
     # Loop asking users to enter an ingredient
@@ -286,7 +285,7 @@ def get_all_ingredients():
 
         # Ask user for ingredients (via blank checker)
 
-        get_ingredient = not_blank("Recipe Line: ",
+        get_ingredient = not_blank("Please Enter amount, unit and ingredient: ",
                                    "This can't be blank",
                                    "yes")
 
@@ -477,9 +476,12 @@ for recipe_line in full_recipe:
 
 # Modernised Recipe Presented:
 
+print()
+print("Modernised Recipe is as follows:")
+print()
+
 # Print Recipe Name
 
-print()
 print(recipe_name)
 
 # Print Recipe Source
