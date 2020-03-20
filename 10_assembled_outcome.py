@@ -153,7 +153,7 @@ def unit_checker(unit_to_check):
 
     teaspoon = ["tsp", "teaspoon", "t", "teaspoons"]
     tablespoon = ["tbs", "tablespoon", "T", "tbsp", "tablespoons"]
-    ounce = ["oz", "fluid ounce", "fl oz", "fluid ounces"]
+    ounce = ["oz", "fluid ounce", "fl oz", "floz", "fluid ounces", "ounce", "ounces"]
     cup = ["c", "cups", "cup"]
     pint = ["p", "pt", "fl pt", "pint", "pints"]
     quart = ["q", "qt", "fl qt", "quart", "quarts"]
